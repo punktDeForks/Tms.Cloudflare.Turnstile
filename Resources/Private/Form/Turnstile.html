@@ -1,0 +1,16 @@
+<f:layout name="Neos.Form:Field" />
+<f:section name="field">
+    <noscript>
+        {f:translate(id: 'widget.noScript.message', package: 'Tms.Cloudflare.Turnstile')}
+    </noscript>
+    <div id="{element.uniqueIdentifier}"
+         class="cf-turnstile"
+         data-action="{element.uniqueIdentifier}"
+         data-sitekey="{element.properties.siteKey}"
+         data-theme="{element.properties.theme}"
+         data-language="{element.properties.language}"
+         data-tabindex="{element.properties.tabindex}"
+         data-size="{element.properties.size}"
+         data-response-field-name="--{element.parentRenderable.parentRenderable.identifier}[{element.identifier}]"
+    ></div>
+</f:section>

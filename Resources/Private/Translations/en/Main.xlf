@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Tms.Cloudflare.Turnstile" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="widget.noScript.message">
+                <source>This form is protected by Cloudflare Turnstile. Please enable JavaScript for this page to identify you as a human.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

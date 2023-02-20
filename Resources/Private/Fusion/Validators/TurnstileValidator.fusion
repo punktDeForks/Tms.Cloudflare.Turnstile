@@ -1,0 +1,7 @@
+prototype(Tms.Cloudflare.Turnstile:TurnstileValidator.Definition) < prototype(Neos.Form.Builder:Validator.Definition) {
+    formElementType = 'Tms.Cloudflare.Turnstile:TurnstileValidator'
+    options {
+        endpoint = ${Configuration.setting('Tms.Cloudflare.Turnstile.endpoint')}
+        secretKey = ${Configuration.setting('Tms.Cloudflare.Turnstile.secretKey')}
+    }
+}

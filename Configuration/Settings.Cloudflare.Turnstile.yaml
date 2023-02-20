@@ -1,0 +1,15 @@
+Tms:
+  Cloudflare:
+    Turnstile:
+      enabled: true
+
+      # Turnstile endpoint & credentials
+      endpoint: 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
+      siteKey: '%env:CLOUDFLARE_TURNSTILE_SITE_KEY%'
+      secretKey: '%env:CLOUDFLARE_TURNSTILE_SECRET_KEY%'
+
+      # Turnstile configurations
+      theme: auto
+      language: auto
+      tabindex: 0
+      size: normal

@@ -1,0 +1,25 @@
+'Tms.Cloudflare.Turnstile:Turnstile':
+  superTypes:
+    'Neos.Form.Builder:FormElement': true
+  ui:
+    icon: 'icon-shield'
+    group: 'form.custom'
+    position: 999
+    label: 'Cloudflare Turnstile'
+    help:
+      message: 'Turnstile is Cloudflare’s smart CAPTCHA alternative.'
+  properties:
+    identifier:
+      defaultValue: 'cf-turnstile'
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true
+    label:
+      defaultValue: ''
+    required:
+      defaultValue: true
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true

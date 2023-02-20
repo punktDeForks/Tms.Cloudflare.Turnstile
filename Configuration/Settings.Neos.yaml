@@ -1,0 +1,23 @@
+Neos:
+  Form:
+    presets:
+      default:
+        formElementTypes:
+          'Tms.Cloudflare.Turnstile:Turnstile':
+            superTypes: ['Neos.Form:FormElement']
+            renderingOptions:
+              templatePathPattern: 'resource://Tms.Cloudflare.Turnstile/Private/Form/Turnstile.html'
+              validationErrorTranslationPackage: Tms.Cloudflare.Turnstile
+        validatorPresets:
+          'Tms.Cloudflare.Turnstile:TurnstileValidator':
+            implementationClassName: Tms\Cloudflare\Turnstile\Validation\Validator\TurnstileValidator
+  Neos:
+    fusion:
+      autoInclude:
+        'Tms.Cloudflare.Turnstile': true
+
+    userInterface:
+      translation:
+        autoInclude:
+          'Tms.Cloudflare.Turnstile':
+            - 'Main'

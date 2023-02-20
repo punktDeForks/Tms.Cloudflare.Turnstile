@@ -1,0 +1,14 @@
+prototype(Neos.Neos:Page) {
+    body.javascripts {
+        cloudflareTurnstileApi = Neos.Fusion:Tag {
+            @if.enabled = ${Configuration.setting('Tms.Cloudflare.Turnstile.enabled')}
+            @if.inLiveWorkspace = ${!node.context.inBackend && node.context.workspaceName == 'live'}
+            tagName = 'script'
+            attributes {
+                src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
+                async = true
+                defer = true
+            }
+        }
+    }
+}

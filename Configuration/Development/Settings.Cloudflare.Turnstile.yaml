@@ -1,0 +1,7 @@
+Tms:
+  Cloudflare:
+    Turnstile:
+      # This key set always passes
+      # - variants can be found here: https://developers.cloudflare.com/turnstile/frequently-asked-questions/#are-there-sitekeys-and-secret-keys-that-can-be-used-for-testing
+      siteKey: '1x00000000000000000000AA'
+      secretKey: '1x0000000000000000000000000000000AA'
