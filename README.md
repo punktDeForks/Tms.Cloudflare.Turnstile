@@ -32,7 +32,7 @@ Tms:
       secretKey: '%env:CLOUDFLARE_TURNSTILE_SECRET_KEY%'
 ```
 
-**Note:** In `Development` context we automatically set a [test key pair](https://developers.cloudflare.com/turnstile/frequently-asked-questions/#are-there-sitekeys-and-secret-keys-that-can-be-used-for-testing)
+> **Note:** In `Development` context the package automatically set a [test key pair](https://developers.cloudflare.com/turnstile/frequently-asked-questions/#are-there-sitekeys-and-secret-keys-that-can-be-used-for-testing)
 
 5.) Add the Turnstile form element to your form configuration or use the Turnstile content element in your node-based forms
 
@@ -43,6 +43,19 @@ prototype(Vendor.PackageName:MyForm) < prototype(Neos.Form.Builder:Form) {
     }
 }
 ```
+
+## Notes
+
+By default, the Turnstile API is called on form interaction. Set `lazyload: false` to call the API on page load.
+
+```yaml
+# Configuration/Settings.yaml
+Tms:
+  Cloudflare:
+    Turnstile:
+      lazyload: true
+```
+
 
 ## Acknowledgments
 
