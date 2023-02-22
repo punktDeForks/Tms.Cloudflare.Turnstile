@@ -3,10 +3,12 @@ function cfTurnstileLazyload() {
     if (scriptTag) {
         let forms = document.querySelectorAll('form');
         Array.prototype.forEach.call(forms, function (form) {
-            form.addEventListener('input', function () {
-                let src = scriptTag.getAttribute('data-src');
-                scriptTag.setAttribute('src', src);
-            });
+            if (form.querySelector('.cf-turnstile')) {
+                form.addEventListener('input', function () {
+                    let src = scriptTag.getAttribute('data-src');
+                    scriptTag.setAttribute('src', src);
+                });
+            }
         });
     }
 }
