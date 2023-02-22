@@ -10,7 +10,6 @@
             </trans-unit>
             <trans-unit id="1676890456">
                 <source>We could not identify you as a human. Please try again.</source>
-                <target xml:lang="de" state="translated">Wir konnten Sie nicht als Mensch identifizieren. Bitte versuchen Sie es erneut.</target>
             </trans-unit>
         </body>
     </file>
