@@ -1,7 +1,13 @@
 Tms:
   Cloudflare:
     Turnstile:
-      # This key set always passes
-      # - variants can be found here: https://developers.cloudflare.com/turnstile/frequently-asked-questions/#are-there-sitekeys-and-secret-keys-that-can-be-used-for-testing
-      siteKey: '1x00000000000000000000AA'
-      secretKey: '1x0000000000000000000000000000000AA'
+      # Site keys and secret keys that can be used for testing
+      # https://developers.cloudflare.com/turnstile/frequently-asked-questions/#are-there-sitekeys-and-secret-keys-that-can-be-used-for-testing
+
+      siteKey: '1x00000000000000000000AA'               # Always passes
+      #siteKey: '2x00000000000000000000AB'              # Always blocks
+      #siteKey: '3x00000000000000000000FF'              # Forces an interactive challenge
+
+      secretKey: '1x0000000000000000000000000000000AA'  # Always passes
+      #secretKey: '2x0000000000000000000000000000000AA' # Always fails
+      #secretKey: '3x0000000000000000000000000000000AA' # Yields a “token already spent” error

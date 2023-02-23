@@ -32,7 +32,7 @@ Tms:
       secretKey: '%env:CLOUDFLARE_TURNSTILE_SECRET_KEY%'
 ```
 
-> **Note:** In `Development` context the package automatically set a [test key pair](https://developers.cloudflare.com/turnstile/frequently-asked-questions/#are-there-sitekeys-and-secret-keys-that-can-be-used-for-testing)
+> **Note:** In `Development` context the package automatically sets [test keys that always pass](https://developers.cloudflare.com/turnstile/frequently-asked-questions/#are-there-sitekeys-and-secret-keys-that-can-be-used-for-testing)
 
 5.) Add the Turnstile form element to your form configuration or use the Turnstile content element in your node-based forms
 
