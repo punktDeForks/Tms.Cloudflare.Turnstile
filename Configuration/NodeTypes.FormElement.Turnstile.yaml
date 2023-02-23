@@ -10,15 +10,23 @@
       message: 'Turnstile is Cloudflare’s smart CAPTCHA alternative.'
   properties:
     identifier:
-      defaultValue: 'cf-turnstile'
+      defaultValue: 'turnstile'
       ui:
         inspector:
           editorOptions:
             disabled: true
     label:
       defaultValue: ''
+      ui:
+        help:
+          message: 'The Turnstile element label is optional. For the invisible widget type, you probably do not want to display a label. An empty label also hides the marker for required fields.'
     required:
       defaultValue: true
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true
+    defaultValue:
       ui:
         inspector:
           editorOptions:

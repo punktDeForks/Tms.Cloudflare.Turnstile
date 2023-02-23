@@ -2,14 +2,16 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="Tms.Cloudflare.Turnstile" source-language="en" datatype="plaintext">
         <body>
-            <trans-unit id="1221560910" xml:space="preserve" approved="yes">
-				<source>This property is required</source>
-            </trans-unit>
-            <trans-unit id="1221560718" xml:space="preserve" approved="yes">
-				<source>This property is required</source>
-            </trans-unit>
             <trans-unit id="1676890456">
                 <source>We could not identify you as a human. Please try again.</source>
+            </trans-unit>
+
+            <!-- Override NotEmptyValidator translations for the Turnstile element -->
+            <trans-unit id="1221560910">
+				<source>We could not identify you as a human. Please try again.</source>
+            </trans-unit>
+            <trans-unit id="1221560718">
+				<source>We could not identify you as a human. Please try again.</source>
             </trans-unit>
         </body>
     </file>

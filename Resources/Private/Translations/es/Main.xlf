@@ -2,9 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="Tms.Cloudflare.Turnstile" source-language="en" target-language="es" datatype="plaintext">
         <body>
-            <trans-unit id="widget.noScript.message">
+            <trans-unit id="widget.noScript.message" xml:space="preserve" approved="yes">
                 <source>This form is protected by Cloudflare Turnstile. Please enable JavaScript for this page to identify you as a human.</source>
-                <target xml:lang="es" state="translated">Este formulario está protegido por Cloudflare Turnstile. Por favor, active JavaScript para que esta página le identifique como humano.</target>
+                <target state="final">Este formulario está protegido por Cloudflare Turnstile. Por favor, active JavaScript para que esta página le identifique como humano.</target>
             </trans-unit>
         </body>
     </file>

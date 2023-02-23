@@ -1,16 +1,30 @@
-<f:layout name="Neos.Form:Field" />
-<f:section name="field">
-    <noscript>
-        {f:translate(id: 'widget.noScript.message', package: 'Tms.Cloudflare.Turnstile')}
-    </noscript>
-    <div id="{element.uniqueIdentifier}"
-         class="cf-turnstile"
-         data-action="{element.uniqueIdentifier}"
-         data-sitekey="{element.properties.siteKey}"
-         data-theme="{element.properties.theme}"
-         data-language="{element.properties.language}"
-         data-tabindex="{element.properties.tabindex}"
-         data-size="{element.properties.size}"
-         data-response-field-name="--{element.parentRenderable.parentRenderable.identifier}[{element.identifier}]"
-    ></div>
-</f:section>
+{namespace form=Neos\Form\ViewHelpers}
+<f:validation.results for="{element.identifier}">
+    <div class="clearfix{f:if(condition: validationResults.flattenedErrors, then: ' error')}"<f:if condition="{element.rootForm.renderingOptions.previewMode}"> data-element="{form:form.formElementRootlinePath(renderable:element)}"</f:if>>
+        <f:if condition="{element.label}!=''">
+            <label for="{element.uniqueIdentifier}">{element -> form:translateElementProperty(property: 'label') -> f:format.nl2br()}<f:if condition="{element.required}"><f:render partial="Neos.Form:Field/Required" /></f:if></label>
+        </f:if>
+        <div class="{element.properties.containerClassAttribute}">
+            <noscript>
+                {f:translate(id: 'widget.noScript.message', package: 'Tms.Cloudflare.Turnstile')}
+            </noscript>
+            <div id="{element.uniqueIdentifier}"
+                 class="cf-turnstile"
+                 data-action="{element.uniqueIdentifier}"
+                 data-sitekey="{element.properties.siteKey}"
+                 data-theme="{element.properties.theme}"
+                 data-language="{element.properties.language}"
+                 data-tabindex="{element.properties.tabindex}"
+                 data-size="{element.properties.size}"
+                 data-response-field-name="--{element.parentRenderable.parentRenderable.identifier}[{element.identifier}]"
+            ></div>
+            <f:if condition="{validationResults.flattenedErrors}">
+                <span class="help-inline">
+                    <f:for each="{validationResults.errors}" as="error">
+                        <div>{error -> f:translate(id: '{error.code}', arguments: error.arguments, package: '{element.renderingOptions.validationErrorTranslationPackage}', source: 'ValidationErrors')}</div>
+                    </f:for>
+                </span>
+            </f:if>
+        </div>
+    </div>
+</f:validation.results>
