@@ -41,7 +41,7 @@ class TurnstileValidator extends AbstractValidator
     protected function isValid($value)
     {
         if (!is_string($value) || empty($value)) {
-            $this->addError('We could not identify you as a human. Please try again.', 1676890456);
+            $this->addError('The captcha challenge failed.', 1676890456);
             return;
         }
 

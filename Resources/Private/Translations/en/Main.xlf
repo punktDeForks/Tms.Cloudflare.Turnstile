@@ -5,6 +5,9 @@
             <trans-unit id="widget.noScript.message">
                 <source>This form is protected by Cloudflare Turnstile. Please enable JavaScript for this page to identify you as a human.</source>
             </trans-unit>
+            <trans-unit id="widget.reset.btn">
+                <source>Please click here to confirm that you are not a robot.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -8,10 +8,10 @@
 
             <!-- Override NotEmptyValidator translations for the Turnstile element -->
             <trans-unit id="1221560910">
-				<source>We could not identify you as a human. Please try again.</source>
+				<source>The captcha challenge failed.</source>
             </trans-unit>
             <trans-unit id="1221560718">
-				<source>We could not identify you as a human. Please try again.</source>
+				<source>The captcha challenge failed.</source>
             </trans-unit>
         </body>
     </file>

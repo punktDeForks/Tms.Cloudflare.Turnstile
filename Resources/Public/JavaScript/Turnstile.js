@@ -13,3 +13,9 @@ function cfTurnstileLazyload() {
     }
 }
 cfTurnstileLazyload();
+
+function cfTurnstileReset(btn) {
+    cfTurnstileLazyload();
+    btn.closest('form').dispatchEvent(new Event('input'));
+    btn.closest('.cf-turnstile-error').style.display = 'none';
+}

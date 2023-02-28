@@ -9,12 +9,12 @@
 
             <!-- Override NotEmptyValidator translations for the Turnstile element -->
             <trans-unit id="1221560910" xml:space="preserve" approved="yes">
-				<source>We could not identify you as a human. Please try again.</source>
-                <target state="final">Wir konnten Sie nicht als Mensch identifizieren. Bitte versuchen Sie es erneut.</target>
+				<source>The captcha challenge failed.</source>
+                <target state="final">Die Captcha-Abfrage ist fehlgeschlagen.</target>
             </trans-unit>
             <trans-unit id="1221560718" xml:space="preserve" approved="yes">
-				<source>We could not identify you as a human. Please try again.</source>
-                <target state="final">Wir konnten Sie nicht als Mensch identifizieren. Bitte versuchen Sie es erneut.</target>
+				<source>The captcha challenge failed.</source>
+                <target state="final">Die Captcha-Abfrage ist fehlgeschlagen.</target>
             </trans-unit>
         </body>
     </file>

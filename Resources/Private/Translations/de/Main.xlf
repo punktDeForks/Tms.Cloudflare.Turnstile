@@ -6,6 +6,10 @@
                 <source>This form is protected by Cloudflare Turnstile. Please enable JavaScript for this page to identify you as a human.</source>
                 <target state="final">Dieses Formular ist durch Cloudflare Turnstile geschützt. Bitte aktivieren Sie JavaScript, damit diese Seite Sie als Mensch erkennen kann.</target>
             </trans-unit>
+            <trans-unit id="widget.reset.btn" xml:space="preserve" approved="yes">
+                <source>Please click here to confirm that you are not a robot.</source>
+                <target state="final">Bitte klicken Sie hier, um zu bestätigen, dass Sie kein Roboter sind.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -19,11 +19,16 @@
                  data-response-field-name="--{element.parentRenderable.parentRenderable.identifier}[{element.identifier}]"
             ></div>
             <f:if condition="{validationResults.flattenedErrors}">
-                <span class="help-inline">
-                    <f:for each="{validationResults.errors}" as="error">
-                        <div>{error -> f:translate(id: '{error.code}', arguments: error.arguments, package: '{element.renderingOptions.validationErrorTranslationPackage}', source: 'ValidationErrors')}</div>
-                    </f:for>
-                </span>
+                <div class="cf-turnstile-error">
+                    <span class="help-inline">
+                        <f:for each="{validationResults.errors}" as="error">
+                            <div>{error -> f:translate(id: '{error.code}', arguments: error.arguments, package: '{element.renderingOptions.validationErrorTranslationPackage}', source: 'ValidationErrors')}</div>
+                        </f:for>
+                    </span>
+                    <f:if condition="{element.properties.lazyload}">
+                    <a data-cf-turnstile-reset href="javascript:;" onclick="javascript:cfTurnstileReset(this);">{f:translate(id: 'widget.reset.btn', package: 'Tms.Cloudflare.Turnstile')}</a>
+                    </f:if>
+                </div>
             </f:if>
         </div>
     </div>
